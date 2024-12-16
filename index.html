@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Физика</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/serif.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<script src ="https://isp.9pr.ru/mathlibrary/math.js"></script>
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+	    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+
+	
+	
+	
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="center">
+					<h1>Физика</h1>
+				</section>
+				<section class="center">
+					<h2>Определения</h2>
+				</section>
+				<section data-markdown="markdown/physics.md">
+				</section>
+				<section data-markdown="markdown/temperature.md">
+				</section>
+				<section data-markdown="markdown/temp_izm.md">
+				</section>
+				<section data-markdown="markdown/celcius.md">
+				</section>
+				<section data-markdown="markdown/farengeit.md">
+				</section>
+				<section data-markdown="markdown/kelvin.md">
+				</section>
+				<section>
+					<section data-markdown style="font-size: 95%;">
+						<script type="text/template">
+							### Градус Делиля
+							Градус Делиля $-$ ныне неупотребимая единица измерения температуры, придуманная астрономом Жозефом Николя Делилем (1688-1768) по указанию Петра I.
+
+							В качестве нуля была выбрана температура кипения воды (100°$C$). За один градус было принято такое изменение температуры, которое приводило к уменьшению объёма ртути на одну стотысячную.
+						</script>
+					</section>
+						<section data-markdown style="font-size: 95%;">
+							<script type="text/template">
+								### Градус Делиля
+								$$t_D = \frac{3}{2}(100 - t_C)$$
+								$$t_C = 100 - \frac{2}{3}t_D$$
+							</script>
+						</section>
+				</section>
+				<section data-markdown="markdown/newton.md">
+				</section>
+
+
+				<section>
+					<h3>Конвертер температур</h3>
+					<form action="temp_value">
+						<input type="text" name="input" value="">
+						<select id="temp" name="temp_value">
+							<option value="cel">Цельсия</option>
+							<option value="far">Фаренгейта</option>
+							<option value="kel">Кельвина</option>
+							<option value="del">Делиля</option>
+							<option value="newt">Ньютона</option>
+						</select>
+						=
+						<input type="text" name="output" value="">
+						<select id="temp" name="temp_value">
+							<option value="cel">Цельсия</option>
+							<option value="far">Фаренгейта</option>
+							<option value="kel">Кельвина</option>
+							<option value="del">Делиля</option>
+							<option value="newt">Ньютона</option>
+						</select>
+					</form>
+					<button type="calc">Вычислить</button>
+				</section>
+
+				<script>
+					document.querySelector("calc").onclick = (e) => {
+						let old_t = document.querySelector("input").value;
+						let new_t = 0;
+						document.querySelector("output").innerHTML = old_t;
+					}
+
+				</script>
+
+
+
+
+
+
+
+				<section data-markdown="markdown/volume.md">
+				</section>
+				<section data-markdown="markdown/vol_izm.md">
+				</section>
+				<section data-markdown="markdown/cub_metr.md">
+				</section>
+				<section data-markdown="markdown/litr.md">
+				</section>
+				<section data-markdown="markdown/gallon.md">
+				</section>
+				<section data-markdown="markdown/pinta.md">
+				</section>
+				<section data-markdown="markdown/barrel.md">
+				</section>
+				
+
+				<section>
+					<h2>Payment information</h2>
+					<p>
+					  <label for="card">
+						<span>Card type:</span>
+					  </label>
+					  <select id="card" name="usercard">
+						<option value="visa">Visa</option>
+						<option value="mc">Mastercard</option>
+						<option value="amex">American Express</option>
+					  </select>
+					</p>
+					<p>
+					  <label for="number">
+						<span>Card number:</span>
+						<strong><abbr title="required">*</abbr></strong>
+					  </label>
+					  <input type="number" id="number" name="cardnumber" />
+					</p>
+					<p>
+					  <label for="date">
+						<span>Expiration date:</span>
+						<strong><abbr title="required">*</abbr></strong>
+						<em>formatted as mm/yy</em>
+					  </label>
+					  <input type="date" id="date" name="expiration" />
+					</p>
+				  </section>
+				  
+				<section class="center">
+					<h2>Графики</h2>
+				</section>
+				
+			</div>
+		</div>
+
+
+		
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				center: false,
+				slideNumber: true,
+				controls: true,
+				dependencies: [
+					{
+						src: 'plugin/katex/katex.js',
+						async: true,
+					},
+					{
+						src: 'plugin/menu/menu.js'
+					},
+					{
+						src: 'plugin/fullscreen/fullscreen.js'
+					},
+				],
+				menu: {
+					numbers: true,
+					markers: true,
+				},
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
